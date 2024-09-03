@@ -48,14 +48,20 @@ class Program
         student3.AddGrade(87.6, 74.9, 73.3, 89.9);
         student4.AddGrade(80.9);
         student4.AddGrade(91.2, 78.8, 72.7, 93.7);
+        
+        Console.WriteLine("\n" +
+                          "Here is a list of hobbit students, their ID numbers,\n" +
+                          "their full list of grades, and their grade averages.\n" +
+                          "");
 
         foreach (var hobbitStudent in students)
         {
             Console.WriteLine($"Name: {hobbitStudent.Name}\n" +
                               $"ID: {hobbitStudent.ID}\n" +
-                              $"List of Grades: {hobbitStudent.Grades}\n" +
-                              $"Average of Grades: {hobbitStudent.CalculateAverageGrade():F1}");
+                              $"List of Grades:");
+            hobbitStudent.PrintGradesList();
+            Console.WriteLine($"Average of Grades: {hobbitStudent.CalculateAverageGrade():F1}\n" +
+                              $"");
         }
-
     }
 }

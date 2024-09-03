@@ -36,4 +36,13 @@ public class Student
             return Grades.Sum() / Grades.Count;
         }
     }
+    
+    //Method to Print each gradeItem in Grades List
+    public void PrintGradesList()
+    {
+        foreach (var gradeItem in Grades)
+        {
+            Console.WriteLine(gradeItem);
+        }
+    }
 }
