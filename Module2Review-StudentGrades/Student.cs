@@ -6,9 +6,9 @@ public class Student
     public string Name { get; set; }
     public int ID { get; set; }
     
-    //List as Property (List of Grades)
+    //Property/List (List of Grades)
     public static List<double> Grades { get; set; } = new List<double>();
-
+    
     
     //Method to add individual student grade to Grades List
     public static void AddGrade(double grade)
